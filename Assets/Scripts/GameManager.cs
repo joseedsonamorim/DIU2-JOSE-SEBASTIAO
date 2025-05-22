@@ -216,23 +216,11 @@ public class GameManager : MonoBehaviour {
     // A new game official starts
     public void StartGame()
     {
-        ReplacePlayerMesh();
         GameState = GameState.Playing;
         if (SoundManager.Instance.background != null)
         {
             SoundManager.Instance.PlayMusic(SoundManager.Instance.background);
         }
-    }
-
-    private void ReplacePlayerMesh()
-    {
-        GameObject currentCharacter = CharacterManager.Instance.characters[CharacterManager.Instance.CurrentCharacterIndex];
-        MeshFilter meshfilter = playerController.GetComponent<MeshFilter>();
-        MeshCollider meshCollider = playerController.GetComponent<MeshCollider>();
-        MeshRenderer meshRenderer = playerController.GetComponent<MeshRenderer>();
-        meshfilter.sharedMesh = currentCharacter.GetComponent<MeshFilter>().sharedMesh;
-        meshCollider.sharedMesh = currentCharacter.GetComponent<MeshFilter>().sharedMesh;
-        meshRenderer.sharedMaterial = currentCharacter.GetComponent<MeshRenderer>().sharedMaterial;
     }
 
     // Called when the player died

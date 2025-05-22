@@ -54,15 +54,6 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
-
-        //Change the character to the selected one
-        GameObject currentCharacter = CharacterManager.Instance.characters[CharacterManager.Instance.CurrentCharacterIndex];
-        Mesh charMesh = currentCharacter.GetComponent<MeshFilter>().sharedMesh;
-        Material charMaterial = currentCharacter.GetComponent<Renderer>().sharedMaterial;
-        GetComponent<MeshFilter>().mesh = charMesh;
-        GetComponent<MeshRenderer>().material = charMaterial;
-        GetComponent<Renderer>().material.shader = curvedWorld;
-
         finishTurn = true;
         currentSpeed = GameManager.Instance.initialSpeed;
         rigid = GetComponent<Rigidbody>();

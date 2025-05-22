@@ -32,48 +32,27 @@ namespace SgLib
 
         public static void RateApp()
         {
-            switch (Application.platform)
-            {
-                case RuntimePlatform.IPhonePlayer:
-                    Application.OpenURL(AppInfo.Instance.APPSTORE_LINK);
-                    break;
-        			
-                case RuntimePlatform.Android:
-                    Application.OpenURL(AppInfo.Instance.PLAYSTORE_LINK);
-                    break;
-            }
+            // Removido devido à remoção do AppInfo
         }
 
         public static void ShowMoreGames()
         {
-            switch (Application.platform)
-            {
-                case RuntimePlatform.IPhonePlayer:
-                    Application.OpenURL(AppInfo.Instance.APPSTORE_HOMEPAGE);
-                    break;
-    			
-                case RuntimePlatform.Android:
-                    Application.OpenURL(AppInfo.Instance.PLAYSTORE_HOMEPAGE);
-                    break;
-            }
+            // Removido devido à remoção do AppInfo
         }
 
         public static void OpenFacebookPage()
         {
-            Application.OpenURL(AppInfo.Instance.FACEBOOK_LINK);
+            // Removido devido à remoção do AppInfo
         }
 
         public static void OpenTwitterPage()
         {
-            Application.OpenURL(AppInfo.Instance.TWITTER_LINK);
+            // Removido devido à remoção do AppInfo
         }
 
         public static void ContactUs()
         {
-            string email = AppInfo.Instance.SUPPORT_EMAIL;
-            string subject = EscapeURL(AppInfo.Instance.APP_NAME + " [" + Application.version + "] Support");
-            string body = EscapeURL("");
-            Application.OpenURL("mailto:" + email + "?subject=" + subject + "&body=" + body);
+            // Removido devido à remoção do AppInfo
         }
 
         public static string EscapeURL(string url)
